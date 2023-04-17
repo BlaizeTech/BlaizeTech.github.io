@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlaizeTech - Games</title>
+    <link rel="stylesheet" type="text/css" href="copysyle.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://cdn.glitch.global/61bd5fba-416b-4194-91f6-f7ccdb515b00/favicon-32x32.png?"
+    />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <center>
+      <nav>
+        <ul>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/index.html">Home</a></li>
+          <li><a href="#">Random</a></li>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/games/games.html">Games</a></li>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/projects/projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </center>
+
+    <!-- Page content -->
+
+    <br />
+    <center>
+      <p>I have made many cool Games and continue to make them!</p>
+    </center>
+    <p></p>
+<center>
+    <button type="button" class="collapsible" id="collapse">
+     Get there (click to open)
+    </button>
+    <div class="content">
+      <p>
+        This is a simple yet fun game were you need to get the circle to the other circle
+      </p>
+      <a class="button" href="/games/gethere/game.html">Get There game</a>
+    </div></center>
+    <p></p>
+<center>
+    <button type="button" class="collapsible" id="collapse">
+     Flap Game (click to open)
+    </button>
+    <div class="content">
+      <p>
+        This is a simple yet fun game based on flappy bird
+      </p>
+      <a class="button" href="/games/flap/flap.html">Flap game</a>
+    </div></center>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
