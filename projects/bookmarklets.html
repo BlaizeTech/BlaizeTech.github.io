@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlaizeTech - Bookmarklets</title>
+    <link rel="stylesheet" type="text/css" href="copysyle.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://cdn.glitch.global/61bd5fba-416b-4194-91f6-f7ccdb515b00/favicon-32x32.png?"
+    />
+  </head>
+  <body>
+    <!-- Navigation menu -->
+    <center>
+      <nav>
+        <ul>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/index.html">Home</a></li>
+          <li><a href="#">Random</a></li>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/games/games.html">Games</a></li>
+          <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/projects/projects.html">Projects</a></li>
+        </ul>
+      </nav>
+    </center>
+
+    <!-- Page content -->
+
+    <br />
+    <center>
+      <p>I have made many cool bookmarklets and continue to make them!</p>
+    </center>
+
+    <button type="button" class="collapsible" id="collapse">
+      30s button clicker (click to open)
+    </button>
+    <div class="content">
+      <p>
+        30s button clicker is a game were you click the buttons that apear on
+        the screen!<br />
+        to play click the button or drag it to you bookkmark bar.
+      </p>
+      <a
+        href="javascript:(function()%7Bjavascript%3A(function()%20%7B%20%20var%20score%20%3D%200%3B%20%20var%20colors%20%3D%20%5B'red'%2C%20'green'%2C%20'blue'%2C%20'yellow'%5D%3B%20%20var%20interval%20%3D%20setInterval(addButton%2C%201000)%3B%20%20%20%20function%20addButton()%20%7B%20%20%20%20var%20color%20%3D%20colors%5BMath.floor(Math.random()%20*%20colors.length)%5D%3B%20%20%20%20var%20button%20%3D%20document.createElement('button')%3B%20%20%20%20button.style.backgroundColor%20%3D%20color%3B%20%20%20%20button.style.width%20%3D%20'50px'%3B%20%20%20%20button.style.height%20%3D%20'50px'%3B%20%20%20%20button.style.borderRadius%20%3D%20'50%25'%3B%20%20%20%20button.style.position%20%3D%20'absolute'%3B%20%20%20%20button.style.top%20%3D%20Math.floor(Math.random()%20*%20window.innerHeight)%20%2B%20'px'%3B%20%20%20%20button.style.left%20%3D%20Math.floor(Math.random()%20*%20window.innerWidth)%20%2B%20'px'%3B%20%20%20%20button.addEventListener('click'%2C%20function()%20%7B%20%20%20%20%20%20score%2B%2B%3B%20%20%20%20%20%20document.getElementById('score').innerHTML%20%3D%20score%3B%20%20%20%20%20%20this.parentNode.removeChild(this)%3B%20%20%20%20%7D)%3B%20%20%20%20document.body.appendChild(button)%3B%20%20%7D%20%20%20%20var%20scoreDisplay%20%3D%20document.createElement('div')%3B%20%20scoreDisplay.style.position%20%3D%20'fixed'%3B%20%20scoreDisplay.style.top%20%3D%20'10px'%3B%20%20scoreDisplay.style.right%20%3D%20'10px'%3B%20%20scoreDisplay.style.backgroundColor%20%3D%20'white'%3B%20%20scoreDisplay.style.padding%20%3D%20'10px'%3B%20%20scoreDisplay.style.borderRadius%20%3D%20'5px'%3B%20%20scoreDisplay.innerHTML%20%3D%20'Score%3A%20%3Cspan%20id%3D%22score%22%3E0%3C%2Fspan%3E'%3B%20%20document.body.appendChild(scoreDisplay)%3B%20%20%20%20setTimeout(function()%20%7B%20%20%20%20clearInterval(interval)%3B%20%20%20%20alert('Game%20over!%20Your%20final%20score%20is%20'%20%2B%20score)%3B%20%20%7D%2C%2030000)%3B%7D)()%7D)()"
+        class="button"
+        >30s Button Clicker</a
+      >
+    </div>
+    <p></p>
+    <button type="button" class="collapsible" id="collapse">
+      Button Shooter (click to open)
+    </button>
+    <div class="content">
+      <p>
+        Button Shooter is a game were you click the buttons that apear on and
+        buy upgrades the screen!<br />
+        To play click the button or drag it to you bookkmark bar.
+      </p>
+      <a
+        class="button"
+        href="javascript:(function()%7Bjavascript%3A(function()%20%7Bvar%20score%20%3D%200%3Bvar%20clickPower%20%3D%201%3Bvar%20upgradeCost%20%3D%2010%3Bvar%20upgradeMultiplier%20%3D%202%3Bvar%20gui%20%3D%20document.createElement(%22div%22)%3Bgui.style%20%3D%20%22position%3Afixed%3Btop%3A10px%3Bleft%3A10px%3Bbackground%3A%23F2F2F2%3Bpadding%3A10px%3Bborder-radius%3A5px%3Bbox-shadow%3A2px%202px%205px%20%23999%3Bfont-size%3A24px%3B%22%3Bgui.innerHTML%20%3D%20%22Score%3A%20%22%20%2B%20score%20%2B%20%22%3Cbr%3EClick%20Power%3A%20%22%20%2B%20clickPower%20%2B%20%22%3Cbr%3E%3Cbutton%20id%3D'upgradeButton'%3EUpgrade%20(%22%20%2B%20upgradeCost%20%2B%20%22)%3C%2Fbutton%3E%22%3Bdocument.body.appendChild(gui)%3Bfunction%20updateGui()%20%7Bgui.innerHTML%20%3D%20%22Score%3A%20%22%20%2B%20score%20%2B%20%22%3Cbr%3EShot%20Power%3A%20%22%20%2B%20clickPower%20%2B%20%22%3Cbr%3E%3Cbutton%20id%3D'upgradeButton'%3EUpgrade%20(%22%20%2B%20upgradeCost%20%2B%20%22)%3C%2Fbutton%3E%22%3Bdocument.getElementById(%22upgradeButton%22).addEventListener(%22click%22%2C%20upgradeClickPower)%3B%7Dfunction%20upgradeClickPower()%20%7Bif%20(score%20%3E%3D%20upgradeCost)%20%7Bscore%20-%3D%20upgradeCost%3BclickPower%20*%3D%20upgradeMultiplier%3BupgradeCost%20*%3D%20upgradeMultiplier%3BupdateGui()%3B%7D%7Dvar%20interval%20%3D%20setInterval(function()%20%7Bvar%20target%20%3D%20document.createElement(%22div%22)%3Btarget.style%20%3D%20%22position%3Aabsolute%3Btop%3A%22%20%2B%20(Math.random()%20*%2090%20%2B%205)%20%2B%20%22%25%3Bleft%3A%22%20%2B%20(Math.random()%20*%2090%20%2B%205)%20%2B%20%22%25%3Bbackground%3Ared%3Bwidth%3A20px%3Bheight%3A20px%3Bborder-radius%3A50%25%3B%22%3Btarget.addEventListener(%22click%22%2C%20function()%20%7Bscore%20%2B%3D%20clickPower%3BupdateGui()%3Bdocument.body.removeChild(target)%3B%7D)%3Bdocument.body.appendChild(target)%3B%7D%2C%201000)%3B%7D)()%7D)()"
+        >Button Shooter</a
+      >
+    </div>
+
+    <p></p>
+
+    <button type="button" class="collapsible" id="collapse">
+      Fish Clicker (click to open)
+    </button>
+    <div class="content">
+      <p>
+        Fish Clickr is a game were you click the Fish that apear on and get a
+        cool message the screen!(fisrt game)<br />
+        To play click the button or drag it to you bookkmark bar.
+      </p>
+      <a
+        class="button"
+        href="javascript:(function()%7Bjavascript%3A(function()%7B%20%20const%20fish%20%3D%20document.createElement('img')%3B%20%20fish.src%20%3D%20'https%3A%2F%2Fbless.wiki%2Fimages%2Fa%2Fa9%2FFish_159.png'%3B%20%20fish.style.position%20%3D%20'fixed'%3B%20%20fish.style.top%20%3D%20'50%25'%3B%20%20fish.style.left%20%3D%20'-50px'%3B%20%20document.body.appendChild(fish)%3B%20%20let%20intervalId%20%3D%20setInterval(()%20%3D%3E%20%7B%20%20%20%20fish.style.left%20%3D%20parseInt(fish.style.left)%20%2B%205%20%2B%20'px'%3B%20%20%20%20if%20(parseInt(fish.style.left)%20%3E%20window.innerWidth)%20%7B%20%20%20%20%20%20document.body.removeChild(fish)%3B%20%20%20%20%20%20clearInterval(intervalId)%3B%20%20%20%20%7D%20%20%7D%2C%2050)%3B%20%20fish.onclick%20%3D%20()%20%3D%3E%20%7B%20%20%20%20document.body.removeChild(fish)%3B%20%20%20%20clearInterval(intervalId)%3B%20%20%20%20alert('You%20caught%20a%20fish!')%3B%20%20%7D%3B%7D)()%7D)()"
+        >Fish Clicker</a
+      >
+    </div>
+
+    <p></p>
+
+    <button type="button" class="collapsible" id="collapse">
+      Clicker Game 1.0 (click to open)
+    </button>
+    <div class="content">
+      <p>
+        Clicker Game 1.0 is a game were you click the button that apear on and
+        get upgrades<br />
+        To play click the button or drag it to you bookkmark bar.
+      </p>
+      <a
+        class="button"
+        href="javascript:(function()%7Bjavascript%3A(function()%20%7B%20%20var%20score%20%3D%200%3B%20%20var%20clickPower%20%3D%201%3B%20%20var%20clickerButton%20%3D%20document.createElement('button')%3B%20%20clickerButton.innerHTML%20%3D%20'Click%20me!'%3B%20%20clickerButton.style.fontSize%20%3D%20'50px'%3B%20%20clickerButton.style.padding%20%3D%20'20px'%3B%20%20clickerButton.onclick%20%3D%20function()%20%7B%20%20%20%20score%20%2B%3D%20clickPower%3B%20%20%20%20updateScore()%3B%20%20%7D%3B%20%20var%20scoreDiv%20%3D%20document.createElement('div')%3B%20%20scoreDiv.innerHTML%20%3D%20'Score%3A%20'%20%2B%20score%3B%20%20scoreDiv.style.fontSize%20%3D%20'30px'%3B%20%20scoreDiv.style.marginBottom%20%3D%20'20px'%3B%20%20document.body.appendChild(scoreDiv)%3B%20%20document.body.appendChild(clickerButton)%3B%20%20function%20updateScore()%20%7B%20%20%20%20scoreDiv.innerHTML%20%3D%20'Score%3A%20'%20%2B%20score%3B%20%20%7D%20%20function%20buyUpgrade()%20%7B%20%20%20%20if%20(score%20%3E%3D%2010)%20%7B%20%20%20%20%20%20score%20-%3D%2010%3B%20%20%20%20%20%20clickPower%20%2B%3D%201%3B%20%20%20%20%20%20updateScore()%3B%20%20%20%20%20%20upgradeButton.innerHTML%20%3D%20'Upgrade%20(Cost%3A%20'%20%2B%20(clickPower%20*%2010)%20%2B%20')'%3B%20%20%20%20%7D%20%20%7D%20%20var%20upgradeButton%20%3D%20document.createElement('button')%3B%20%20upgradeButton.innerHTML%20%3D%20'Upgrade%20(Cost%3A%2010)'%3B%20%20upgradeButton.onclick%20%3D%20buyUpgrade%3B%20%20upgradeButton.style.fontSize%20%3D%20'20px'%3B%20%20upgradeButton.style.marginTop%20%3D%20'20px'%3B%20%20document.body.appendChild(upgradeButton)%3B%7D)()%7D)()"
+        >Clicker Game 1.0</a
+      >
+    </div>
+
+    <p></p>
+    <button type="button" class="collapsible" id="collapse">
+      Clicker Game 2.0 (click to open)
+    </button>
+    <div class="content">
+      <p>
+        Clicker Game 2.0 is a game were you click the button that apear on and
+        get upgrades<br />
+        To play click the button or drag it to you bookkmark bar.
+      </p>
+      <a
+        class="button"
+        href="javascript:(function()%7Bjavascript%3A(function()%20%7B%20%20var%20clicks%20%3D%200%3B%20%20var%20clickPower%20%3D%201%3B%20%20var%20upgradeCost%20%3D%2010%3B%20%20var%20upgradeMultiplier%20%3D%202%3B%20%20var%20winScore%20%3D%201000000000000%3B%20%20function%20updateClicks()%20%7B%20%20%20%20document.getElementById(%22clicks%22).innerHTML%20%3D%20%22Clicks%3A%20%22%20%2B%20clicks%3B%20%20%20%20checkWinCondition()%3B%20%20%7D%20%20function%20clickButton()%20%7B%20%20%20%20clicks%20%2B%3D%20clickPower%3B%20%20%20%20updateClicks()%3B%20%20%7D%20%20function%20upgradeClickPower()%20%7B%20%20%20%20if%20(clicks%20%3E%3D%20upgradeCost)%20%7B%20%20%20%20%20%20clicks%20-%3D%20upgradeCost%3B%20%20%20%20%20%20clickPower%20*%3D%20upgradeMultiplier%3B%20%20%20%20%20%20upgradeCost%20*%3D%20upgradeMultiplier%3B%20%20%20%20%20%20updateClicks()%3B%20%20%20%20%20%20updateUpgradeCost()%3B%20%20%20%20%20%20updateClickPower()%3B%20%20%20%20%7D%20%20%7D%20%20function%20updateUpgradeCost()%20%7B%20%20%20%20document.getElementById(%22upgradeCost%22).innerHTML%20%3D%20%22Upgrade%20Cost%3A%20%22%20%2B%20upgradeCost%3B%20%20%7D%20%20function%20updateClickPower()%20%7B%20%20%20%20document.getElementById(%22clickPower%22).innerHTML%20%3D%20%22Click%20Power%3A%20%22%20%2B%20clickPower%3B%20%20%7D%20%20function%20checkWinCondition()%20%7B%20%20%20%20if%20(clicks%20%3E%3D%20winScore)%20%7B%20%20%20%20%20%20alert(%22Congratulations!%20You%20have%20won%20the%20game!%22)%3B%20%20%20%20%20%20resetGame()%3B%20%20%20%20%7D%20%20%7D%20%20function%20resetGame()%20%7B%20%20%20%20clicks%20%3D%200%3B%20%20%20%20clickPower%20%3D%201%3B%20%20%20%20upgradeCost%20%3D%2010%3B%20%20%20%20updateClicks()%3B%20%20%20%20updateUpgradeCost()%3B%20%20%20%20updateClickPower()%3B%20%20%7D%20%20var%20gui%20%3D%20document.createElement(%22div%22)%3B%20%20gui.innerHTML%20%3D%20'%3Cdiv%20style%3D%22position%3Afixed%3Btop%3A10px%3Bleft%3A10px%3Bbackground%3A%23F2F2F2%3Bpadding%3A10px%3Bborder-radius%3A5px%3Bbox-shadow%3A2px%202px%205px%20%23999%3B%22%3E%3Cbutton%20id%3D%22clickButton%22%20style%3D%22background-color%3A%236C5CE7%3Bcolor%3A%23FFF%3Bpadding%3A5px%2010px%3Bborder%3Anone%3Bborder-radius%3A5px%3Bbox-shadow%3A1px%201px%202px%20%23999%3B%22%3EClick%3C%2Fbutton%3E%3Cbr%3E%3Cbr%3E%3Cspan%20id%3D%22clicks%22%3EClicks%3A%200%3C%2Fspan%3E%3Cbr%3E%3Cbr%3E%3Cbutton%20id%3D%22upgradeButton%22%20style%3D%22background-color%3A%23FD7272%3Bcolor%3A%23FFF%3Bpadding%3A5px%2010px%3Bborder%3Anone%3Bborder-radius%3A5px%3Bbox-shadow%3A1px%201px%202px%20%23999%3B%22%3EUpgrade%20Click%20Power%3C%2Fbutton%3E%3Cbr%3E%3Cspan%20id%3D%22clickPower%22%3EClick%20Power%3A%201%3C%2Fspan%3E%3Cbr%3E%3Cspan%20id%3D%22upgradeCost%22%3EUpgrade%20Cost%3A%2010%3C%2Fspan%3E%3Cbr%3E%3Cbr%3E%3Cspan%3EWin%20at%201%20Trillion%20or%201000000000000%3C%2Fspan%3E%3Cbr%3E%3Cbr%3E%3C%2Fdiv%3E'%3B%20%20document.body.appendChild(gui)%3B%20%20document.getElementById(%22clickButton%22).addEventListener(%22click%22%2C%20clickButton)%3B%20%20document.getElementById(%22upgradeButton%22).addEventListener(%22click%22%2C%20upgradeClickPower)%3B%7D)()%7D)()"
+        >Clicker Game 2.0</a
+      >
+    </div>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
