@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlaizeTech</title>
+     <link rel="stylesheet" type="text/css" href="syle.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/61bd5fba-416b-4194-91f6-f7ccdb515b00/favicon-32x32.png?">
+</head>
+  <body>
+    <!-- Navigation menu -->
+    <center><nav>
+      <ul>
+        <li><a href="https://steelgrumpyapplicationprogram.blaizehundhause.repl.co/index.html/">Home</a></li>
+        <li><a href="#">Random</a></li>
+        <li><a href="/games/games.html">Games</a></li>
+        <li><a href="/projects/projects.html">Projects</a></li>
+      </ul>
+    </nav>
+      </center>
+
+    <!-- Page content -->
+<center> 
+  <h1>
+  Welcome To BlaizeTech
+    </h1>
+  </center>
+<br>
+<center><button class="button" onclick="typeWriter()"> Shall We Start?</button></center>
+
+<center><p id="demo"></p></center>
+
+<script>
+var i = 0;
+var txt = "Meet Blaize Tech, a young aspiring coder who is passionate about technology and software development. My curiosity and determination to learn more about coding has driven me to explore various programming languages and tools. I believe that technology can make the world a better place, and I want to contribute to this vision by creating innovative solutions to real-world problems. I am  always seeking new challenges and opportunities to improve my skills, and I am excited about the endless possibilities that coding has to offer. With my creativity and dedication, I am sure to become a successful software developer in the future!";
+var speed = 10;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+  </body>
+</html>
