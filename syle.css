@@ -1,0 +1,92 @@
+.button {
+  background-image: linear-gradient(to right, #FF5733, #F1CBAF); /* Gradient from Burnt Orange to Peach */
+  border: none;
+  color: #FFFFFF; /* White text */
+  padding: 16px 32px; /* Some padding to make it look nice */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Add a transition effect on hover */
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for a sleek look */
+}
+
+.button:hover {
+  background-image: linear-gradient(to right, #F1CBAF, #87CEEB); /* Gradient from Peach to Sky Blue on hover */
+}
+
+body {
+  background-color: #FEE9C8;
+}
+
+   /* Navigation CSS code */
+nav {
+        background-color: #FFCBA4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+      }
+
+ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+li {
+        display: inline-block;
+        margin-right: 16px;
+      }
+ a {
+        color: #8B2500;
+        text-decoration: none;
+        transition: color 0.2s;
+        padding: 8px 16px;
+        border-radius: 24px;
+        background-color: #FF5733;
+      }
+a:hover {
+  color: black; 
+}
+
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f7931e }
+}
+#typewriter {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .15em solid #f7931e;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: calc(100% - 0.15em) }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f7931e }
+}
+#demo {
+  font-size: 24px;
+  color: black;
+}
+p {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+h1 {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+=
