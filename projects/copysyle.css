@@ -1,5 +1,5 @@
 .button {
-  background-image: linear-gradient(to right, #FF5733, #F1CBAF); /* Gradient from Burnt Orange to Peach */
+  background-image: linear-gradient(to right,#022DBD , #85a1ff ); /* Gradient from Burnt Orange to Peach */
   border: none;
   color: #FFFFFF; /* White text */
   padding: 16px 32px; /* Some padding to make it look nice */
@@ -14,16 +14,16 @@
 }
 
 .button:hover {
-  background-image: linear-gradient(to right, #F1CBAF, #87CEEB); /* Gradient from Peach to Sky Blue on hover */
+  background-image: linear-gradient(to right, #6681db , #48b1db); /* Gradient from Peach to Sky Blue on hover */
 }
 
 body {
-  background-color: #FEE9C8;
+  background-color: #a7bbfb ;
 }
 
    /* Navigation CSS code */
 nav {
-        background-color: #FFCBA4;
+        background-color: #022DBD ;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         padding: 16px;
       }
@@ -39,12 +39,12 @@ li {
         margin-right: 16px;
       }
  a {
-        color: #8B2500;
+        color: black ;
         text-decoration: none;
         transition: color 0.2s;
         padding: 8px 16px;
         border-radius: 24px;
-        background-color: #FF5733;
+        background-color: #85a1ff ;
       }
 a:hover {
   color: black; 
@@ -86,7 +86,7 @@ a:hover {
 .collapsible {
   border-radius: 8px;
   text-align: center;
-  background-image: linear-gradient(to right, #FF5733, #f5e1d3);
+  background-image: linear-gradient(to right, #022DBD , #01081e );
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -107,7 +107,7 @@ a:hover {
   padding: 0 18px;
   display: none;
   overflow: hidden;
-  background-image: linear-gradient(to right, #87CEEB, #03638a); 
+  background-image: linear-gradient(to right,#2d91b9, #07516e ); 
 }
 #collapse {
   text-align: center;
@@ -137,7 +137,7 @@ input[type=text], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: linear-gradient(to right, #FF5733, #F1CBAF);
+  border: linear-gradient(to right, #022DBD , #F1CBAF);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -146,7 +146,7 @@ input[type=password], select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: linear-gradient(to right, #FF5733, #F1CBAF);
+  border: linear-gradient(to right, #022DBD , #F1CBAF);
   border-radius: 4px;
   box-sizing: border-box;
 }
