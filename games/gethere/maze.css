@@ -1,0 +1,39 @@
+#game-area {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+#player {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+#target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  border-radius: 50%;
+}
+
+#timer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.time-up {
+  color: red;
+}
