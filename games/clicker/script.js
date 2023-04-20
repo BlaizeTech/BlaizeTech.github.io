@@ -2,10 +2,12 @@ let points = 0;
 let upgrade1Cost = 10;
 let upgrade2Cost = 50;
 let upgrade3Cost = 100;
+let clickValue = 1;
+let autoClickerLevel = 0;
 
 // Click button function
 document.getElementById("clickButton").addEventListener("click", function() {
-  points++;
+  points += clickValue;
   document.getElementById("points").innerText = points;
 });
 
@@ -14,9 +16,9 @@ document.getElementById("upgrade1").addEventListener("click", function() {
   if (points >= upgrade1Cost) {
     points -= upgrade1Cost;
     upgrade1Cost *= 2;
+    clickValue *= 2;
     document.getElementById("points").innerText = points;
-    document.getElementById("upgrade1").innerText = "Upgrade 1 - Cost: " + upgrade1Cost + " points";
-    // Add upgrade 1 functionality
+    document.getElementById("upgrade1").innerText = "Upgrade 1 - Cost: " + upgrade1Cost + " points (Click Value x2)";
   } else {
     alert("Not enough points!");
   }
@@ -27,9 +29,13 @@ document.getElementById("upgrade2").addEventListener("click", function() {
   if (points >= upgrade2Cost) {
     points -= upgrade2Cost;
     upgrade2Cost *= 2;
+    autoClickerLevel++;
     document.getElementById("points").innerText = points;
-    document.getElementById("upgrade2").innerText = "Upgrade 2 - Cost: " + upgrade2Cost + " points";
-    // Add upgrade 2 functionality
+    document.getElementById("upgrade2").innerText = "Upgrade 2 - Cost: " + upgrade2Cost + " points (Auto Clicker Level " + autoClickerLevel + ")";
+    setInterval(function() {
+      points += autoClickerLevel;
+      document.getElementById("points").innerText = points;
+    }, 1000);
   } else {
     alert("Not enough points!");
   }
@@ -40,9 +46,9 @@ document.getElementById("upgrade3").addEventListener("click", function() {
   if (points >= upgrade3Cost) {
     points -= upgrade3Cost;
     upgrade3Cost *= 2;
+    clickValue *= 3;
     document.getElementById("points").innerText = points;
-    document.getElementById("upgrade3").innerText = "Upgrade 3 - Cost: " + upgrade3Cost + " points";
-    // Add upgrade 3 functionality
+    document.getElementById("upgrade3").innerText = "Upgrade 3 - Cost: " + upgrade3Cost + " points (Click Value x3)";
   } else {
     alert("Not enough points!");
   }
