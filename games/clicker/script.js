@@ -1,3 +1,9 @@
+// Click button function
+document.getElementById("clickButton").addEventListener("click", function() {
+  points += clickValue;
+  document.getElementById("points").innerText = points;
+});
+
 // Upgrade 1 function
 document.getElementById("upgrade1").addEventListener("click", function() {
   if (points >= upgrade1Cost) {
