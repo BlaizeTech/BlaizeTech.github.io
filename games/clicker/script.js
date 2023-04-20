@@ -1,16 +1,3 @@
-let points = 0;
-let upgrade1Cost = 10;
-let upgrade2Cost = 50;
-let upgrade3Cost = 100;
-let clickValue = 1;
-let autoClickerLevel = 0;
-
-// Click button function
-document.getElementById("clickButton").addEventListener("click", function() {
-  points += clickValue;
-  document.getElementById("points").innerText = points;
-});
-
 // Upgrade 1 function
 document.getElementById("upgrade1").addEventListener("click", function() {
   if (points >= upgrade1Cost) {
