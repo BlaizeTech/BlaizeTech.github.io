@@ -46,7 +46,7 @@
     document.getElementById("upgrade3").addEventListener("click", function() {
       if (points >= upgrade3Cost) {
         points -= upgrade3Cost;
-        upgrade3Cost *= 2;
+        upgrade3Cost *= 10;
         clickValue *= 3;
         document.getElementById("points").innerText = points;
         document.getElementById("upgrade3").innerText = "Upgrade 3 - Cost: " + upgrade3Cost + " points (Click Value x3)";
