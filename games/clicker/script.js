@@ -1,4 +1,7 @@
 let points = 0;
+let upgrade1Cost = 10;
+let upgrade2Cost = 50;
+let upgrade3Cost = 100;
 
 // Click button function
 document.getElementById("clickButton").addEventListener("click", function() {
@@ -8,10 +11,12 @@ document.getElementById("clickButton").addEventListener("click", function() {
 
 // Upgrade 1 function
 document.getElementById("upgrade1").addEventListener("click", function() {
-  if (points >= 10) {
-    points -= 10;
+  if (points >= upgrade1Cost) {
+    points -= upgrade1Cost;
+    upgrade1Cost *= 2;
     document.getElementById("points").innerText = points;
-    // Add upgrade functionality
+    document.getElementById("upgrade1").innerText = "Upgrade 1 - Cost: " + upgrade1Cost + " points";
+    // Add upgrade 1 functionality
   } else {
     alert("Not enough points!");
   }
@@ -19,10 +24,12 @@ document.getElementById("upgrade1").addEventListener("click", function() {
 
 // Upgrade 2 function
 document.getElementById("upgrade2").addEventListener("click", function() {
-  if (points >= 50) {
-    points -= 50;
+  if (points >= upgrade2Cost) {
+    points -= upgrade2Cost;
+    upgrade2Cost *= 2;
     document.getElementById("points").innerText = points;
-    // Add upgrade functionality
+    document.getElementById("upgrade2").innerText = "Upgrade 2 - Cost: " + upgrade2Cost + " points";
+    // Add upgrade 2 functionality
   } else {
     alert("Not enough points!");
   }
@@ -30,10 +37,12 @@ document.getElementById("upgrade2").addEventListener("click", function() {
 
 // Upgrade 3 function
 document.getElementById("upgrade3").addEventListener("click", function() {
-  if (points >= 100) {
-    points -= 100;
+  if (points >= upgrade3Cost) {
+    points -= upgrade3Cost;
+    upgrade3Cost *= 2;
     document.getElementById("points").innerText = points;
-    // Add upgrade functionality
+    document.getElementById("upgrade3").innerText = "Upgrade 3 - Cost: " + upgrade3Cost + " points";
+    // Add upgrade 3 functionality
   } else {
     alert("Not enough points!");
   }
