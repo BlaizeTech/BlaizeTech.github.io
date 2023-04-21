@@ -1,0 +1,30 @@
+#username-container {
+text-align: center;
+margin-top: 50px;
+}
+
+#username {
+font-size: 48px;
+margin-bottom: 20px;
+color: #022DBD;
+font-weight: bold;
+border: 2px solid #022DBD;
+padding: 10px;
+display: inline-block;
+border-radius: 5px;
+}
+
+button {
+font-size: 24px;
+padding: 10px;
+border-radius: 5px;
+background-color: #022DBD;
+color: white;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+background-color: #4CAF50;
+}
