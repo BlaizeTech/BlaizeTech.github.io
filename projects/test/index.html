@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlaizeTech - Html Editor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/BlaizeTech/BlaizeTech.github.io/main/favicon-32x32.png" />
+    <style>
+      body {
+        background-color: #022DBD;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .editor {
+        flex: 1;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 14px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+
+      .button {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .export-button {
+        background-color: #28a745;
+      }
+
+      .clear-button {
+        background-color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <textarea id="html-editor" class="editor" placeholder="Enter HTML code here..."></textarea>
+      <div class="buttons">
+              <button class="button" id="save">save</button>
+        <button class="button" onclick="run()">Run</button>
+        <button class="button export-button" onclick="handleFileSelect()">Export</button>
+        <button class="button clear-button" onclick="clearEditor()">Clear</button>
+      </div>
+    </div>
+
+    <script>
+    var editor = document.getElementById("html-editor");
+var saveButton = document.getElementById("save");
+
+// Check if there is a saved document and load it
+if (getCookie("document") != "") {
+  editor.innerHTML = getCookie("document");
+}
+
+// Save the document to a cookie when the save button is clicked
+saveButton.addEventListener("click", function() {
+  setCookie("document", editor.innerHTML);
+  alert("Document saved!");
+});
+
+// Function to set a cookie
+function setCookie(name, value) {
+  document.cookie = name + "=" + value + "; path=/";
+}
+
+// Function to get the value of a cookie
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) {
+    return parts.pop().split(";").shift();
+  }
+  return "";
+}
+
+function run() {
+  var htmlCode = document.getElementById("html-editor").value;
+  var outputWindow = window.open();
+  outputWindow.document.write(htmlCode);
+  outputWindow.document.close();
+}
+
+function clearEditor() {
+  document.getElementById("html-editor").value = "";
+}
+
+function handleFileSelect() {
+  var htmlCode = document.getElementById("html-editor").value;
+  var blob = new Blob([htmlCode], {type: "text/html"});
+  var downloadLink = document.createElement("a");
+  var fileName = prompt("Enter a file name:", "index.html");
+  if (fileName !== null) {
+    downloadLink.href = URL.createObjectURL(blob);
+    downloadLink.download = fileName;
+    downloadLink.click();
+  }
+}
+ 
+      function run() {
+        var htmlCode = document.getElementById("html-editor").value;
+        var outputWindow = window.open();
+        outputWindow.document.write(htmlCode);
+        outputWindow.document.close();
+      }
+
+      function clearEditor() {
+        document.getElementById("html-editor").value = "";
+      }
+
+      function handleFileSelect() {
+        var htmlCode = document.getElementById("html-editor").value;
+        var blob = new Blob([htmlCode], {type: "text/html"});
+        var downloadLink = document.createElement("a");
+        var fileName = prompt("Enter a file name:", "index.html");
+        if (fileName !== null) {
+          downloadLink.href = URL.createObjectURL(blob);
+          downloadLink.download = fileName;
+          downloadLink.click();
+        }
+      }
+      
+     
+    </script>
+  </body>
+</html>
