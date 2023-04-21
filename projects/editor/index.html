@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlaizeTech - Html Editor</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://raw.githubusercontent.com/BlaizeTech/BlaizeTech.github.io/main/favicon-32x32.png"
+    />
+  </head>
+  <body>
+   	<div class="container">
+		<textarea id="html-editor" class="editor" placeholder="Enter HTML code here..."></textarea>
+		<div class="buttons">
+			<button class="button" onclick="run()">Run</button>
+			<button class="button export-button" onclick="handleFileSelect()">Export</button>
+			<button class="button clear-button" onclick="clearEditor()">Clear</button>
+		</div>
+	</div>
+
+    <script src="script.js"></script>
+    <br/>      
+  </body>
+</html>
