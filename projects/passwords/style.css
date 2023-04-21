@@ -1,7 +1,6 @@
-html {
-background-color: #022DBD;
+body {
+  background-color: #ff0000;
 }
-
 .password-generator {
   width: 500px;
   margin: auto;
