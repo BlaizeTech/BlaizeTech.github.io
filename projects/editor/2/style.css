@@ -16,6 +16,10 @@ body {
     width: 400px;
     height: 200px;
 }
+#editor {
+    width: 400px;
+    height: 200px;
+  }
 
 .buttons {
     display: flex;
