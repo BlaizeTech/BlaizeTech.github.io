@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Generator by BlaizeTech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        #qrForm {
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666666;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #dddddd;
+        }
+
+        button[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #qrCode {
+            margin: 20px auto;
+            max-width: 300px;
+            background-color: #ffffff;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>QR Code Generator</h1>
+    <form id="qrForm">
+        <label for="text">Text/URL:</label>
+        <input type="text" id="text" name="text" required>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    <div id="qrCode"></div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        document.getElementById('qrForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var text = document.getElementById('text').value;
+
+            // Generate QR code
+            var qr = new QRCode(document.getElementById('qrCode'), {
+                text: text,
+                width: 256,
+                height: 256,
+                colorDark: "#022DBD",
+                colorLight: "Black"
+            });
+        });
+    </script>
+</body>
+</html>
