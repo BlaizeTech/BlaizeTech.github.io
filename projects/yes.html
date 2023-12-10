@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Redirect</title>
+</head>
+<body>
+
+    <h1>URL Redirect</h1>
+
+    <form id="redirectForm" onsubmit="redirect(); return false;">
+        <label for="urlInput">Enter URL:</label>
+        <input type="text" id="urlInput" name="url" required>
+        <button type="submit">Redirect</button>
+    </form>
+
+    <script>
+        function redirect() {
+            var url = document.getElementById('urlInput').value;
+            if (url.trim() !== '') {
+                window.location.href = url;
+            }
+        }
+    </script>
+
+</body>
+</html>
